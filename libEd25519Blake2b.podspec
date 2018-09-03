@@ -16,6 +16,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/vitelabs/libEd25519Blake2b-ios.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
+  s.swift_version = '4.1'
 
   s.source_files = 'libEd25519Blake2b/Classes/**/*.{swift,c,h,cpp,hpp}'
   s.preserve_paths = 'libEd25519Blake2b/Classes/Clib/module.modulemap'
@@ -26,5 +27,9 @@ Pod::Spec.new do |s|
       'SWIFT_INCLUDE_PATHS' => '$(PODS_TARGET_SRCROOT)/libEd25519Blake2b/Classes/Clib',
       'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) ED25519_CUSTOMHASH ED25519_CUSTOMRNG',
   }
+  s.xcconfig = {
+      'VALID_ARCHS' =>  'arm64 x86_64',
+  }
+
 
 end
