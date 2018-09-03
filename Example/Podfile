@@ -1,0 +1,13 @@
+platform :ios, '10.0'
+use_frameworks!
+
+target 'libEd25519Blake2b_Example' do
+    pod 'libEd25519Blake2b', :path => '../'
+
+end
+
+target 'libEd25519Blake2b_ExampleTests' do
+    pod 'libEd25519Blake2b', :path => '../'
+
+
+end
