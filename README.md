@@ -1,9 +1,6 @@
 # libEd25519Blake2b
 
-[![CI Status](https://img.shields.io/travis/Stone/libEd25519Blake2b.svg?style=flat)](https://travis-ci.org/Stone/libEd25519Blake2b)
-[![Version](https://img.shields.io/cocoapods/v/libEd25519Blake2b.svg?style=flat)](https://cocoapods.org/pods/libEd25519Blake2b)
-[![License](https://img.shields.io/cocoapods/l/libEd25519Blake2b.svg?style=flat)](https://cocoapods.org/pods/libEd25519Blake2b)
-[![Platform](https://img.shields.io/cocoapods/p/libEd25519Blake2b.svg?style=flat)](https://cocoapods.org/pods/libEd25519Blake2b)
+This project is a Swift adaptation of the portable C [Ed25519](https://github.com/nanocurrency/raiblocks/tree/master/ed25519-donna) and [Blake2b](https://github.com/nanocurrency/raiblocks/tree/master/blake2).
 
 ## Example
 
