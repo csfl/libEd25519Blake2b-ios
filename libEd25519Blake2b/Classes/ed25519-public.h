@@ -1,5 +1,5 @@
 //
-//  ed25519_pub.h
+//  ed25519-public.h
 //  Pods
 //
 //  Created by Stone on 2018/9/3.

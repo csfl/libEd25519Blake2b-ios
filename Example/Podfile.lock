@@ -1,5 +1,5 @@
 PODS:
-  - libEd25519Blake2b (0.0.2)
+  - libEd25519Blake2b (0.0.3)
 
 DEPENDENCIES:
   - libEd25519Blake2b (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  libEd25519Blake2b: b2f21f17b252db9182c509f6de23c787e1ad0df9
+  libEd25519Blake2b: 93b639c8ee7d32ebe320030c9dfad32fad72a4fb
 
 PODFILE CHECKSUM: 97006777f038b03e86fc17ed16742cd1b12b8a5e
 
