@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'libEd25519Blake2b'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'ED25519 with Blake2b.'
   s.homepage         = 'https://github.com/vitelabs/libEd25519Blake2b-ios'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.source_files = 'libEd25519Blake2b/Classes/**/*.{swift,c,h,cpp,hpp}'
   s.preserve_paths = 'libEd25519Blake2b/Classes/Clib/module.modulemap'
   s.private_header_files = 'libEd25519Blake2b/Classes/Clib/*.{h,hpp}'
-  s.public_header_files = 'libEd25519Blake2b/Classes/ed25519-public.h'
+  s.public_header_files = 'libEd25519Blake2b/Classes/{ed25519,blake2}-public.h'
 
   s.pod_target_xcconfig = {
       'SWIFT_INCLUDE_PATHS' => '$(PODS_TARGET_SRCROOT)/libEd25519Blake2b/Classes/Clib',

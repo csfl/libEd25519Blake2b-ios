@@ -38,6 +38,65 @@ class libEd25519Blake2b_ExampleTests: XCTestCase {
         testJS()
         testGo()
         testMore()
+        testBlake2b_5()
+        testBlake2b_20()
+    }
+
+    func testBlake2b_20() {
+        let originals = ["1c9c08c4f063214d8fe8e695be98ed3e59b7b34a225cbf58004fc8e014a1240c",
+                         "f0f74272558cfb6c1a7eb02e2536ce62b55ecbd9e7e3114d0e7db65177cb6d68",
+                         "bddb753d41c8217a10bb34c05936db6e901b9b9f1483b1cd3ac7cdfd323a738b",
+                         "b04bfa07f1ebc35bc8512ecb85a34835a7a2f9c77c50bd03866642c5e26141eb",
+                         "e3dfffed72292d1e7aa292d606e39e11b60ee9406c0ea0a412a4fbc54c8d3e27",
+                         "036764612a11a0815f9c1eaa230e45eba0bfcfa2fa820a084894c9dee23ac31d",
+                         "c87fd77b98d5f4c7712366dca4f0e395cd6cc0e3b2a71623f64bed6669e3085f",
+                         "008c6974bcb68aabc0c215e3b3ae2d408b4c367d9d1fcd2a2de81f6c1a488fa8"].map { $0.hex2Bytes }
+
+        let rets = ["3e1b20ce8613222458fa791e571637aedf2069c4",
+                   "8e9c2a51c063ac7c40ad29e702fc3dfb2baa0263",
+                   "bb310a07d81a832b80a2b55837de38997fee4383",
+                   "aa6f1bdab6667080662e22f6dabf73f788e88add",
+                   "b4d8eefc1c7c6d031ee8218bdbf4c5a2b4e89b7b",
+                   "29f9aeaa593a65c205d081d41f06c260b6fa5fad",
+                   "b90c6fd984afbfc0dd5da8602228c2907e890726",
+                   "6af3e252cb88a98e149f756b18fee161537874a5"].map { $0.hex2Bytes }
+
+
+
+        for i in 0..<originals.count {
+            let original = originals[i]
+            let ret = rets[i]
+            XCTAssertEqual(ret, Blake2b.hash(outLength: 20, in: original))
+        }
+    }
+
+    func testBlake2b_5() {
+        let originals = ["3e1b20ce8613222458fa791e571637aedf2069c4",
+                         "8e9c2a51c063ac7c40ad29e702fc3dfb2baa0263",
+                         "bb310a07d81a832b80a2b55837de38997fee4383",
+                         "aa6f1bdab6667080662e22f6dabf73f788e88add",
+                         "b4d8eefc1c7c6d031ee8218bdbf4c5a2b4e89b7b",
+                         "29f9aeaa593a65c205d081d41f06c260b6fa5fad",
+                         "b90c6fd984afbfc0dd5da8602228c2907e890726",
+                         "6af3e252cb88a98e149f756b18fee161537874a5"].map { $0.hex2Bytes }
+
+        let rets = ["e5b58abe3b",
+                   "77c415c833",
+                   "f50e0843c7",
+                   "8b14ca7d8c",
+                   "765bb5f08b",
+                   "cee385d445",
+                   "198cafa3da",
+                   "52070d0d99"].map { $0.hex2Bytes }
+
+
+
+
+        for i in 0..<originals.count {
+            let original = originals[i]
+            let ret = rets[i]
+            XCTAssertEqual(ret, Blake2b.hash(outLength: 5, in: original))
+        }
     }
 
     func testBase() {
