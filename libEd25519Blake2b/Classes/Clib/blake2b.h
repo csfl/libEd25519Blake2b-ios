@@ -1,12 +1,8 @@
-//
-//  blake2-public.h
-//  Pods
-//
-//  Created by Stone on 2018/9/4.
-//
+// blake2b.h
+// BLAKE2b Hashing Context and API Prototypes
 
-#ifndef blake2_public_h
-#define blake2_public_h
+#ifndef BLAKE2B_H
+#define BLAKE2B_H
 
 #include <stdint.h>
 #include <stddef.h>
@@ -14,6 +10,7 @@
 #if defined(__cplusplus)
 extern "C" {
 #endif
+
 
 // state context
 typedef struct {
@@ -28,11 +25,11 @@ typedef struct {
 //      1 <= outlen <= 64 gives the digest size in bytes.
 //      Secret key (also <= 64 bytes) is optional (keylen = 0).
 int blake2b_init(blake2b_ctx *ctx, size_t outlen,
-                 const void *key, size_t keylen);    // secret key
+    const void *key, size_t keylen);    // secret key
 
 // Add "inlen" bytes from "in" into the hash.
 void blake2b_update(blake2b_ctx *ctx,   // context
-                    const void *in, size_t inlen);      // data to be hashed
+    const void *in, size_t inlen);      // data to be hashed
 
 // Generate the message digest (size given in init).
 //      Result placed in "out".
@@ -40,11 +37,12 @@ void blake2b_final(blake2b_ctx *ctx, void *out);
 
 // All-in-one convenience function.
 int blake2b(void *out, size_t outlen,   // return buffer for digest
-            const void *key, size_t keylen,     // optional secret key
-            const void *in, size_t inlen);      // data to be hashed
+    const void *key, size_t keylen,     // optional secret key
+    const void *in, size_t inlen);      // data to be hashed
 
 #if defined(__cplusplus)
 }
 #endif
 
-#endif /* blake2_public_h */
+#endif
+

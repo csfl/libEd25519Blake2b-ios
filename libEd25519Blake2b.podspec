@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'libEd25519Blake2b'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = 'ED25519 with Blake2b.'
   s.homepage         = 'https://github.com/vitelabs/libEd25519Blake2b-ios'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
