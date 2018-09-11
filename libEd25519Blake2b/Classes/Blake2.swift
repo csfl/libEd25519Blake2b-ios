@@ -12,9 +12,9 @@ public struct Blake2b {
     public static func hash(outLength: Int, in: Bytes, key: Bytes? = nil) -> Bytes? {
         var out = Bytes(count: outLength)
         if let key = key {
-            blake2b(&out, outLength, `in`, `in`.count, key, key.count)
+            blake2b(&out, outLength, key, key.count, `in`, `in`.count)
         } else {
-            blake2b(&out, outLength, `in`, `in`.count, nil, 0)
+            blake2b(&out, outLength, nil, 0, `in`, `in`.count)
         }
         return out
     }

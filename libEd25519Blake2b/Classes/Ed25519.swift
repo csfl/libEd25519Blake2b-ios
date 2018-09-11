@@ -42,10 +42,4 @@ public struct Ed25519 {
     public static func signOpen(message: Bytes, publicKey: Bytes, signature: Bytes) -> Bool {
         return ed25519_sign_open(message, Int(message.count), publicKey, signature) == 0
     }
-
-    public static func curved25519ScalarmultBasepoint(e: Bytes) -> Bytes {
-        var publickey = Bytes(count: publicKeyLength)
-        curved25519_scalarmult_basepoint(&publickey, e)
-        return publickey
-    }
 }

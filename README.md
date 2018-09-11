@@ -1,6 +1,6 @@
 # libEd25519Blake2b
 
-This project is a Swift adaptation of the portable C [Ed25519](https://github.com/nanocurrency/raiblocks/tree/master/ed25519-donna) and [Blake2b](https://github.com/nanocurrency/raiblocks/tree/master/blake2).
+This project is a Swift adaptation of the portable C [Ed25519](https://github.com/nanocurrency/raiblocks/tree/master/ed25519-donna) and [Blake2b](https://github.com/mjosaarinen/blake2_mjosref).
 
 ## Example
 
