@@ -13,6 +13,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		8E0F99EA213D0AF50004028D /* libEd25519Blake2b_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0F99E9213D0AF50004028D /* libEd25519Blake2b_ExampleTests.swift */; };
+		8E79C6F0214F9B6C00FAEEBC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E79C6EF214F9B6C00FAEEBC /* Extension.swift */; };
 		A104E3944CAF36E8584CF36B /* Pods_libEd25519Blake2b_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19933A84D2679AF00C2CCF9D /* Pods_libEd25519Blake2b_ExampleTests.framework */; };
 		B85A493F142FAF6AC2F9C698 /* Pods_libEd25519Blake2b_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75545C7B826FF7888A76F55A /* Pods_libEd25519Blake2b_Example.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		8E0F99E7213D0AF50004028D /* libEd25519Blake2b_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libEd25519Blake2b_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E0F99E9213D0AF50004028D /* libEd25519Blake2b_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libEd25519Blake2b_ExampleTests.swift; sourceTree = "<group>"; };
 		8E0F99EB213D0AF50004028D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E79C6EF214F9B6C00FAEEBC /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		B91165B050E8FCFE82B5268E /* Pods-libEd25519Blake2b_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libEd25519Blake2b_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-libEd25519Blake2b_Example/Pods-libEd25519Blake2b_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D1851394AA103644DA9FCC72 /* Pods-libEd25519Blake2b_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libEd25519Blake2b_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-libEd25519Blake2b_Tests/Pods-libEd25519Blake2b_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		DD936C8F1CABA7991BDACBAA /* Pods-libEd25519Blake2b_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libEd25519Blake2b_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-libEd25519Blake2b_Tests/Pods-libEd25519Blake2b_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				8E0F99E9213D0AF50004028D /* libEd25519Blake2b_ExampleTests.swift */,
+				8E79C6EF214F9B6C00FAEEBC /* Extension.swift */,
 				8E0F99EB213D0AF50004028D /* Info.plist */,
 			);
 			path = libEd25519Blake2b_ExampleTests;
@@ -351,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E0F99EA213D0AF50004028D /* libEd25519Blake2b_ExampleTests.swift in Sources */,
+				8E79C6F0214F9B6C00FAEEBC /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
